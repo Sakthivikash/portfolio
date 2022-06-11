@@ -2,6 +2,7 @@ import "./Home.css";
 import React from "react";
 import Typical from "react-typical";
 import { Button, Container, Row } from "react-bootstrap";
+import Resume from "../Resume/Resume";
 
 function Home() {
   return (
@@ -36,7 +37,10 @@ function Home() {
             </Row>
             <Row className="profile-options display-flex">
               {/* <Button className="hire-btn"> Hire Me </Button> */}
-              <a href="#" download="#">
+              <a
+                href="https://drive.google.com/file/d/1Tc-H12on_WiAZ7_8oJtrQMM1nmCqwUkC/view?usp=sharing"
+                target="_blank"
+              >
                 <Button className="resume-btn"> Get Resume</Button>
               </a>
             </Row>

@@ -21,7 +21,12 @@ function About() {
               mechanical field. So I decided to change my career into IT
               industry. Thus I learned Full Stack Developmeent Course.
             </div>
-            <Button className="resume-button">Get Resume</Button>
+            <a
+              href="https://drive.google.com/file/d/1Tc-H12on_WiAZ7_8oJtrQMM1nmCqwUkC/view?usp=sharing"
+              target="_blank"
+            >
+              <Button className="resume-button">Get Resume</Button>
+            </a>
           </Col>
         </Row>
       </Container>
