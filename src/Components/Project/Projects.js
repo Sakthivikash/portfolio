@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row, Card } from "react-bootstrap";
+import { Col, Container, Row, Card, Button } from "react-bootstrap";
 import "./Projects.css";
 import Taskflow from "../../Images/TaskFlow.png";
 import Chatapp from "../../Images/Chatapp.png";
@@ -10,6 +10,12 @@ function Projects() {
       <Container className="project-box">
         <Row className="heading">
           <h1>Projects</h1>
+          <p>
+            <span>
+              <b style={{ fontSize: "18px" }}>Credentials:-</b>
+              <b>Email:</b> user@demo.com | <b>Password:</b> user123{" "}
+            </span>
+          </p>
         </Row>
         <Row className="card-container">
           <Card className="card">
@@ -24,9 +30,20 @@ function Projects() {
                 <b>Technologies Used:</b>
                 ReactJS, NodeJS, MongoDB, Bootstrap, Mui Material
               </p>
+              <div className="buttons">
+                <a href="https://vocal-madeleine-55f8d7.netlify.app/">
+                  <Button className="pro-btn">Live</Button>
+                </a>
+                <a href="https://github.com/Sakthivikash/project-management-tool-client">
+                  <Button className="pro-btn">FrontEnd</Button>
+                </a>
+                <a href="https://github.com/Sakthivikash/Project-management-tool-back-end">
+                  <Button className="pro-btn">BackEnd</Button>
+                </a>
+              </div>
             </Card.Body>
           </Card>
-          <Card className="card">
+          <Card className="card ">
             <Card.Img variant="top" src={Chatapp} />
             <Card.Body>
               <Card.Title>ChatApp</Card.Title>
@@ -37,6 +54,17 @@ function Projects() {
                 <b>Technologies Used:</b>
                 ReactJS, NodeJS, MongoDB, Bootstrap, Mui Material
               </p>
+              <div className="buttons">
+                <a href="#">
+                  <Button className="pro-btn">Live</Button>
+                </a>
+                <a href="#">
+                  <Button className="pro-btn">FrontEnd</Button>
+                </a>
+                <a href="#">
+                  <Button className="pro-btn">BackEnd</Button>
+                </a>
+              </div>
             </Card.Body>
           </Card>
           {/* <Card sx={{ maxWidth: 345 }}>

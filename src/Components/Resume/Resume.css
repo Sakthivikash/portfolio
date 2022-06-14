@@ -30,7 +30,7 @@
   box-shadow: 2px 5px 10px rgb(166, 207, 237);
   transition: 1s;
   animation: box;
-  max-height: 600px;
+  max-height: 800px;
   background-color: white;
   border-radius: 5px;
   margin-bottom: 60px;
@@ -117,10 +117,10 @@
 }
 .javascript {
   animation-name: slideJS;
-  background: rgb(7, 221, 0);
+  background: rgb(227, 234, 6);
 }
 .javascript::after {
-  border: 2px solid rgb(7, 221, 0);
+  border: 2px solid rgb(227, 234, 6);
 }
 .reactjs {
   animation-name: slideRJS;
@@ -136,7 +136,13 @@
 .nodejs::after {
   border: 2px solid rgb(12, 132, 8);
 }
-
+.mongodb {
+  animation-name: slideMDB;
+  background: rgb(28, 254, 20);
+}
+.mongodb::after {
+  border: 2px solid rgb(28, 254, 20);
+}
 @keyframes slideHTML {
   to {
     width: 95%;
@@ -160,6 +166,11 @@
 @keyframes slideNJS {
   to {
     width: 75%;
+  }
+}
+@keyframes slideMDB {
+  to {
+    width: 85%;
   }
 }
 .tool {

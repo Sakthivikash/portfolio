@@ -11,8 +11,10 @@ function Home() {
         <Row md={8} className="profile">
           <Container className="profile-details">
             <Row className="profile-details-name">
-              <span className="primary-text">Hello🙋‍♂️, I'm </span>
-              <span className="highlighted-text">Sakthivikash</span>
+              <p>
+                <span className="primary-text">Hello🙋‍♂️, I'm </span>
+                <span className="highlighted-text">Sakthivikash</span>
+              </p>
             </Row>
             <Row className="profile-details-role">
               <h2 style={{ textAlign: "left" }}>
@@ -35,6 +37,22 @@ function Home() {
                 </span>
               </span>
             </Row>
+            <h4 style={{ marginTop: "10px" }}>
+              <a
+                href="https://www.linkedin.com/in/sakthivikash-s-vikash-820393201/"
+                style={{ color: "white", margin: "10px" }}
+                target="_blank"
+              >
+                <i class="devicon-linkedin-plain"></i>
+              </a>{" "}
+              <a
+                href="https://github.com/Sakthivikash"
+                style={{ color: "white", margin: "10px" }}
+                target="_blank"
+              >
+                <i class="devicon-github-original"></i>
+              </a>
+            </h4>
             <Row className="profile-options display-flex">
               {/* <Button className="hire-btn"> Hire Me </Button> */}
               <a

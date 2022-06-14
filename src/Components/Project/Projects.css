@@ -20,6 +20,8 @@
 }
 .card {
   max-width: 450px;
+  background-color: rgb(202, 237, 249);
+  color: rgb(8, 8, 84);
 }
 @media screen and (max-width: 1130px) {
   .card {
@@ -30,4 +32,12 @@
   .card {
     max-width: 400px;
   }
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.pro-btn {
+  font-size: 18px;
 }

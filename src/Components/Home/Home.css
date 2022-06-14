@@ -35,6 +35,8 @@
   font-weight: 500;
   font-size: 24px;
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 .profile-details-role {
   display: flex;
@@ -46,7 +48,8 @@
   color: (--white);
 }
 .highlighted-text {
-  color: rgb(10, 236, 202);
+  color: rgb(102, 251, 216);
+  font-size: 28px;
 }
 .profile-role-tagline {
   font-weight: 500;
@@ -101,10 +104,11 @@
 .profile-picture-background {
   height: 92%;
   width: 92%;
-  background-image: url("../../Images/Profile\ pic.jpg");
+  background-image: url("../../Images/Profile-image.png");
   background-size: cover;
   border-radius: 50%;
   background-repeat: no-repeat;
+  background-color: white;
   background-position: center;
 }
 .profile-picture-background:hover {

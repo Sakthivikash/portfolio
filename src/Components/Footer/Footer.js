@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import EmailIcon from "@mui/icons-material/Email";
-import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
+import CopyrightIcon from "@mui/icons-material/Copyright";
 import { HashLink as Link } from "react-router-hash-link";
 
 function Footer() {
@@ -13,7 +13,7 @@ function Footer() {
         style={{
           color: "white",
           textAlign: "center",
-          padding: "50px",
+          padding: "50px 50px 0px 50px",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -46,28 +46,33 @@ function Footer() {
             </a>
           </h4>
         </div>
+        <p
+          style={{
+            justifySelf: "flex-end",
+            height: "50px",
+            paddingRight: "20px",
+          }}
+        >
+          <Link to="#Home" smooth>
+            <i
+              class="fa fa-arrow-up up-icon"
+              style={{
+                color: "white",
+                fontSize: "30px",
+                border: "2px solid white",
+                padding: "5px",
+                borderRadius: "50%",
+              }}
+            ></i>
+          </Link>
+        </p>
       </div>
-      <p
-        style={{
-          textAlign: "right",
-          height: "50px",
-          paddingRight: "20px",
-        }}
+      <h5
+        style={{ textAlign: "center", color: "white", padding: "10px" }}
         className="box"
       >
-        <Link to="#Home" smooth>
-          <i
-            class="fa fa-arrow-up up-icon"
-            style={{
-              color: "white",
-              fontSize: "30px",
-              border: "2px solid white",
-              padding: "5px",
-              borderRadius: "50%",
-            }}
-          ></i>
-        </Link>
-      </p>
+        <CopyrightIcon /> Copyright 2022 | Sakthivikash. All rigthts reserved
+      </h5>
     </div>
   );
 }

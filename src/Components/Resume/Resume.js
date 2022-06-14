@@ -11,7 +11,7 @@ function Resume() {
     <div className="box" id="Skill">
       <Container className="resume-container">
         <Row className="resume-header">
-          <h1>My Bio Details</h1>
+          <h1>My Skills</h1>
         </Row>
         <Row className="resume-box">
           <Col md={5} className="resume-navs">
@@ -24,18 +24,7 @@ function Resume() {
               <span style={{ marginRight: "10px" }}>
                 <LaptopMacIcon />
               </span>
-              Programming Skills
-            </Button>
-            <Button
-              className="nav-item"
-              onClick={() => {
-                setNav("edu");
-              }}
-            >
-              <span style={{ marginRight: "10px" }}>
-                <SchoolIcon />
-              </span>
-              Education
+              Technical Skills
             </Button>
             <Button
               className="nav-item"
@@ -48,20 +37,31 @@ function Resume() {
               </span>
               Other Tools
             </Button>
+            <Button
+              className="nav-item"
+              onClick={() => {
+                setNav("edu");
+              }}
+            >
+              <span style={{ marginRight: "10px" }}>
+                <SchoolIcon />
+              </span>
+              Education
+            </Button>
           </Col>
           <Col md={7} className="resume-details">
             {nav == "edu" && (
               <ListGroup>
                 <ListGroup.Item>
-                  Diploma
+                  <b>Diploma</b>
                   <h5> Er.Perumal Manimekalai Polytechnic College, Hosur.</h5>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  HSC
+                  <b>HSC</b>
                   <h5>Government Higher Secondary School, Barur.</h5>
                 </ListGroup.Item>
                 <ListGroup.Item>
-                  SSLC
+                  <b>SSLC</b>
                   <h5> Government Higher Secondary School, Barur.</h5>
                 </ListGroup.Item>
               </ListGroup>
@@ -108,6 +108,14 @@ function Resume() {
                     <span className="progress-width nodejs">&nbsp;</span>
                   </div>
                 </ListGroup.Item>
+                <ListGroup.Item className="progress container">
+                  <span className="name">
+                    <i class="devicon-mongodb-plain"></i> MongoDB
+                  </span>
+                  <div className="progress">
+                    <span className="progress-width mongodb">&nbsp;</span>
+                  </div>
+                </ListGroup.Item>
               </ListGroup>
             )}
 
@@ -117,8 +125,9 @@ function Resume() {
                   <i class="devicon-bootstrap-plain"></i> Bootstrap
                 </ListGroup.Item>
                 <ListGroup.Item className="tool">
-                  <i class="devicon-mongodb-plain"></i> MongoDB
+                  <i class="devicon-heroku-original"></i> Heroku
                 </ListGroup.Item>
+                <ListGroup.Item className="tool"> Netlify</ListGroup.Item>
                 <ListGroup.Item className="tool">
                   <i class="devicon-git-plain"></i> Git
                 </ListGroup.Item>
