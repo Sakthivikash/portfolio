@@ -1,0 +1,195 @@
+.box {
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(10, 6, 125, 0.989233193277311) 0%,
+    rgba(6, 5, 133, 1) 0%,
+    rgba(99, 124, 231, 1) 52%,
+    rgba(6, 10, 115, 1) 100%
+  );
+}
+.resume-container {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  margin: none !important;
+}
+.resume-header {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin: 70px 0 50px 0;
+  color: white;
+}
+.resume-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 2px 5px 10px rgb(166, 207, 237);
+  transition: 1s;
+  animation: box;
+  max-height: 800px;
+  background-color: white;
+  border-radius: 5px;
+  margin-bottom: 60px;
+}
+@keyframes box {
+  to {
+    transform: translateX(-200px);
+  }
+}
+
+.resume-details {
+  max-width: 800px;
+  max-height: 500px;
+  border-left: 5px solid #ccc;
+}
+.resume-navs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: monospace;
+  font-size: 25px;
+  flex-wrap: wrap;
+}
+.nav-item {
+  margin-top: 20px;
+  font-size: 28px;
+  cursor: pointer;
+  width: 95%;
+  background-color: rgb(211, 90, 15);
+  color: white;
+}
+.nav-item:hover {
+  background-color: rgb(27, 15, 105);
+  color: white;
+}
+.progress-container {
+  display: flex;
+  margin: 20px;
+  align-items: center;
+}
+.name {
+  width: 160px;
+  font-size: 1.2rem;
+}
+.progress {
+  flex: 1;
+  height: 12px;
+  border-radius: 8px;
+  background: rgb(240, 240, 240);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0, 1);
+}
+.progress-width {
+  height: 12px;
+  width: 0;
+  border-radius: 8px;
+  display: inline-block;
+  position: relative;
+  animation: 1s ease-out forwards;
+}
+.progress-width::after {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  right: -10px;
+  top: -6px;
+  border-radius: 50%;
+  background: rgb(66, 62, 62);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0, 1);
+}
+.html {
+  animation-name: slideHTML;
+  background: rgb(255, 51, 0);
+}
+.html::after {
+  border: 2px solid rgb(255, 51, 0);
+}
+.css {
+  animation-name: slideCSS;
+  background: rgb(0, 128, 255);
+}
+.css::after {
+  border: 2px solid rgb(0, 128, 255);
+}
+.javascript {
+  animation-name: slideJS;
+  background: rgb(227, 234, 6);
+}
+.javascript::after {
+  border: 2px solid rgb(227, 234, 6);
+}
+.reactjs {
+  animation-name: slideRJS;
+  background: rgb(34, 201, 234);
+}
+.reactjs::after {
+  border: 2px solid rgb(34, 201, 234);
+}
+.nodejs {
+  animation-name: slideNJS;
+  background: rgb(12, 132, 8);
+}
+.nodejs::after {
+  border: 2px solid rgb(12, 132, 8);
+}
+.mongodb {
+  animation-name: slideMDB;
+  background: rgb(28, 254, 20);
+}
+.mongodb::after {
+  border: 2px solid rgb(28, 254, 20);
+}
+@keyframes slideHTML {
+  to {
+    width: 95%;
+  }
+}
+@keyframes slideCSS {
+  to {
+    width: 90%;
+  }
+}
+@keyframes slideJS {
+  to {
+    width: 80%;
+  }
+}
+@keyframes slideRJS {
+  to {
+    width: 80%;
+  }
+}
+@keyframes slideNJS {
+  to {
+    width: 75%;
+  }
+}
+@keyframes slideMDB {
+  to {
+    width: 85%;
+  }
+}
+.tool {
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: aliceblue;
+  color: rgb(6, 6, 106);
+}
+@media screen and (max-width: 400px) {
+  .nav-item {
+    font-size: 24px;
+  }
+  .resume-box {
+    margin: none;
+  }
+}
+@media screen and (max-width: 300px) {
+  .nav-item {
+    font-size: 18px;
+    width: 80%;
+  }
+}

@@ -1,0 +1,19 @@
+.navbar-container {
+  background: linear-gradient(
+    90deg,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(10, 6, 125, 0.989233193277311) 0%,
+    rgba(6, 5, 133, 1) 0%,
+    rgba(99, 124, 231, 1) 52%,
+    rgba(6, 10, 115, 1) 100%
+  );
+}
+.nav-link {
+  font-size: 20px;
+  font-weight: 400;
+  color: white !important;
+  font-family: "Times New Roman", Times, serif;
+}
+.bar-btn:focus{
+  outline: none !important;
+}

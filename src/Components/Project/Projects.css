@@ -1,0 +1,43 @@
+.project-box {
+  padding-bottom: 30px;
+}
+.heading {
+  font-family: "Josefin Sans", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0px;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 100px;
+  width: fit-content;
+  box-shadow: 5px 5px 10px #ccc, inset -5px -5px 10px #ccc, -5px -5px 10px #ccc,
+    inset 5px 5px 10px #ccc;
+  padding: 20px;
+}
+.card {
+  max-width: 450px;
+  background-color: rgb(202, 237, 249);
+  color: rgb(8, 8, 84);
+}
+@media screen and (max-width: 1130px) {
+  .card {
+    max-width: 430px;
+  }
+}
+@media screen and (max-width: 1030px) {
+  .card {
+    max-width: 400px;
+  }
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.pro-btn {
+  font-size: 18px;
+}
