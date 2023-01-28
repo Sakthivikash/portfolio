@@ -1,5 +1,6 @@
 .project-box {
   padding-bottom: 30px;
+  
 }
 .heading {
   font-family: "Josefin Sans", sans-serif;
@@ -13,15 +14,17 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 100px;
+  border-radius: 5px;
   width: fit-content;
-  box-shadow: 5px 5px 10px #ccc, inset -5px -5px 10px #ccc, -5px -5px 10px #ccc,
-    inset 5px 5px 10px #ccc;
+ 
   padding: 20px;
 }
 .card {
   max-width: 450px;
   background-color: rgb(202, 237, 249);
-  color: rgb(8, 8, 84);
+  color: rgb(8, 8, 84); 
+  box-shadow: 5px 5px 10px rgb(147, 147, 147);
+  border: 1px solid black;
 }
 @media screen and (max-width: 1130px) {
   .card {

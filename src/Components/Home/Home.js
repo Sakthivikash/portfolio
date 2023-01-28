@@ -3,6 +3,7 @@ import React from "react";
 import Typical from "react-typical";
 import { Button, Container, Row } from "react-bootstrap";
 import Resume from "../Resume/Resume";
+import { motion } from "framer-motion";
 
 function Home() {
   return (
@@ -38,13 +39,15 @@ function Home() {
               </span>
             </Row>
             <h4 style={{ marginTop: "10px" }}>
-              <a
+              <motion.a
+                whileHover={{ scale: "1.1" }}
+                transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 href="https://www.linkedin.com/in/sakthivikash-s-vikash-820393201/"
                 style={{ color: "white", margin: "10px" }}
                 target="_blank"
               >
                 <i class="devicon-linkedin-plain"></i>
-              </a>{" "}
+              </motion.a>{" "}
               <a
                 href="https://github.com/Sakthivikash"
                 style={{ color: "white", margin: "10px" }}

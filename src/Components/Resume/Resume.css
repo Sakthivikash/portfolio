@@ -30,10 +30,10 @@
   box-shadow: 2px 5px 10px rgb(166, 207, 237);
   transition: 1s;
   animation: box;
-  max-height: 800px;
   background-color: white;
   border-radius: 5px;
   margin-bottom: 60px;
+  width: 100%;
 }
 @keyframes box {
   to {
@@ -46,6 +46,11 @@
   max-height: 500px;
   border-left: 5px solid #ccc;
 }
+@media screen and (max-width: 765px) {
+ .resume-details{
+  border: none !important;
+ }
+}
 .resume-navs {
   display: flex;
   flex-direction: column;
@@ -53,6 +58,7 @@
   font-family: monospace;
   font-size: 25px;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 .nav-item {
   margin-top: 20px;
@@ -73,11 +79,13 @@
 }
 .name {
   width: 160px;
-  font-size: 1.2rem;
+  font-size: 15px;
 }
 .progress {
   flex: 1;
-  height: 12px;
+  height: 55px;
+  padding: 5px !important;
+  margin-bottom: 5px !important;;
   border-radius: 8px;
   background: rgb(240, 240, 240);
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0, 1);
@@ -93,8 +101,10 @@
 .progress-width::after {
   position: absolute;
   content: "";
-  width: 18px;
-  height: 18px;
+  margin-top: 4px;
+  margin-right: 4px;
+  width: 15px;
+  height: 15px;
   right: -10px;
   top: -6px;
   border-radius: 50%;

@@ -2,7 +2,7 @@ import React from "react";
 import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import Box from "@mui/material/Box";
 import "./Navbar.css";
-import DnsIcon from '@mui/icons-material/Dns';
+import DnsIcon from "@mui/icons-material/Dns";
 import SwipeableDrawer from "@mui/material/SwipeableDrawer";
 import Button from "@mui/material/Button";
 import List from "@mui/material/List";
@@ -12,8 +12,7 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
-import MailIcon from "@mui/icons-material/Mail";
-import { HashLink as Link } from "react-router-hash-link";
+import { Wave } from "react-animated-text";
 
 function NavBar() {
   const [state, setState] = React.useState({
@@ -35,6 +34,13 @@ function NavBar() {
     setState({ ...state, [anchor]: open });
   };
 
+  const navs = [
+    ["fa-home", "Home"],
+    ["fa-user-secret", "About"],
+    ["fa-cog", "Skills"],
+    ["fa-laptop", "Projects"],
+  ];
+
   const list = (anchor) => (
     <Box
       sx={{
@@ -45,54 +51,25 @@ function NavBar() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem key="home" disablePadding>
-          <ListItemButton to="#Home" smooth>
-            <ListItemIcon>
-              <i class="fa fa-home" aria-hidden="true"></i>
-            </ListItemIcon>
-            <ListItemText style={{ fontSize: "larger" }}>
-                Home
-            </ListItemText>
-          </ListItemButton>
-        </ListItem>
-        <ListItem key="about" disablePadding>
-          <ListItemButton to="#About" smooth>
-            <ListItemIcon>
-              <i class="fa fa-user-secret" aria-hidden="true"></i>
-            </ListItemIcon>
-            <ListItemText style={{ fontSize: "larger" }}>
-                About
-            </ListItemText>
-          </ListItemButton>
-        </ListItem>
-        <ListItem key="skill" disablePadding>
-          <ListItemButton to="#Skill" smooth>
-            <ListItemIcon>
-              <i class="fa fa-cog" aria-hidden="true"></i>
-            </ListItemIcon>
-            <ListItemText style={{ fontSize: "larger" }}>
-                Skills
-            </ListItemText>
-          </ListItemButton>
-        </ListItem>
-        <ListItem key="project" disablePadding>
-          <ListItemButton to="#Projects" smooth>
-            <ListItemIcon>
-              <i class="fa fa-laptop" aria-hidden="true"></i>
-            </ListItemIcon>
-            <ListItemText style={{ fontSize: "larger" }}>
-                Projects
-            </ListItemText>
-          </ListItemButton>
-        </ListItem>
+        {navs.map((nav, i) => (
+          <ListItem disablePadding>
+            <ListItemButton to={`#${nav[1]}`} smooth>
+              <ListItemIcon>
+                <i class={`fa ${nav[0]}`} aria-hidden="true"></i>
+              </ListItemIcon>
+              <ListItemText style={{ fontSize: "larger" }}>
+                {nav[1]}
+              </ListItemText>
+            </ListItemButton>
+          </ListItem>
+        ))}
+
         <ListItem key="contact" disablePadding>
           <ListItemButton to="#Contact" smooth>
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <ListItemText style={{ fontSize: "larger" }}>
-                Contact
-            </ListItemText>
+            <ListItemText style={{ fontSize: "larger" }}>Contact</ListItemText>
           </ListItemButton>
         </ListItem>
       </List>
@@ -102,14 +79,27 @@ function NavBar() {
 
   return (
     <Navbar bg="light" expand="lg" className="navbar-container">
-      <Container className="navbar">
+      <Container className="navbar h-60">
         <Navbar.Brand href="/">
-          <h1 style={{ color: "white" }}>Portfolio</h1>
+          <h3 style={{ color: "white" }}>
+            <Wave text="Portfolio" effect="stretch" effectChange="2" />
+          </h3>
         </Navbar.Brand>
         <Nav className="ml-auto">
           <React.Fragment key="Top">
             <Button className="bar-btn" onClick={toggleDrawer("Top", true)}>
-              <DnsIcon style={{ backgroundColor: "white", fontSize: "30px", borderRadius: "5px" }} />
+              <DnsIcon
+                style={{
+                  backgroundColor: "white",
+                  fontSize: "30px",
+                  borderRadius: "2px",
+                  position: "fixed",
+                  top: "25px",
+                  marginLeft: "30px",
+                  zIndex: "999",
+                  boxShadow: "2px 2px 5px blue",
+                }}
+              />
             </Button>
             <SwipeableDrawer
               Top="Top"

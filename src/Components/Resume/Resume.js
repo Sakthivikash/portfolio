@@ -4,14 +4,39 @@ import "./Resume.css";
 import LaptopMacIcon from "@mui/icons-material/LaptopMac";
 import SchoolIcon from "@mui/icons-material/School";
 import ConstructionIcon from "@mui/icons-material/Construction";
+import { motion } from "framer-motion";
+import netlify from "../../Images/netlify.png";
 
 function Resume() {
   const [nav, setNav] = useState("skills");
+
+  const skills = [
+    ["devicon-html5-plain", "html", "HTML"],
+    ["devicon-css3-plain", "css", "CSS"],
+    ["devicon-javascript-plain", "javascript", "Javascript"],
+    ["devicon-react-plain", "reactjs", "ReactJs"],
+    ["devicon-nodejs-plain", "nodejs", "NodeJs"],
+    ["devicon-mongodb-plain", "mongodb", "MongoDB"],
+  ];
+  const ohterTools = [
+    ["devicon-bootstrap-plain", "Bootstrap"],
+    ["devicon-heroku-original", "Heroku"],
+    ["devicon-git-plain", "Git"],
+    ["devicon-vscode-plain", "VS Code"],
+  ];
+  const education = [
+    ["Diploma", "Er.Perumal Manimekalai Polytechnic College, Hosur."],
+    ["HSC", "Government Higher Secondary School, Barur."],
+    ["SSLC", "Government Higher Secondary School, Barur."],
+  ];
   return (
-    <div className="box" id="Skill">
+    <div className="box" id="Skills">
       <Container className="resume-container">
         <Row className="resume-header">
           <h1>My Skills</h1>
+          <h5 className="title-tagline" style={{ colour: "white" }}>
+            What I learned
+          </h5>
         </Row>
         <Row className="resume-box">
           <Col md={5} className="resume-navs">
@@ -52,87 +77,109 @@ function Resume() {
           <Col md={7} className="resume-details">
             {nav == "edu" && (
               <ListGroup>
-                <ListGroup.Item>
-                  <b>Diploma</b>
-                  <h5> Er.Perumal Manimekalai Polytechnic College, Hosur.</h5>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <b>HSC</b>
-                  <h5>Government Higher Secondary School, Barur.</h5>
-                </ListGroup.Item>
-                <ListGroup.Item>
-                  <b>SSLC</b>
-                  <h5> Government Higher Secondary School, Barur.</h5>
-                </ListGroup.Item>
+                {education.map((edu) => (
+                  <ListGroup.Item>
+                    <motion.div
+                      initial="hidden"
+                      whileInView={"visible"}
+                      variants={{
+                        visible: {
+                          x: 1,
+                          opacity: 1,
+                          transition: {
+                            type: "spring",
+                          },
+                        },
+                        hidden: { opacity: 1, x: 80 },
+                      }}
+                    >
+                      <b>{edu[0]}</b>
+                      <h5>{edu[1]}</h5>
+                    </motion.div>
+                  </ListGroup.Item>
+                ))}
               </ListGroup>
             )}
             {nav == "skills" && (
               <ListGroup className="skills">
-                <ListGroup.Item className="progress container">
-                  <span className="name">
-                    <i class="devicon-html5-plain"></i> HTML
-                  </span>
-                  <div className="progress">
-                    <span className="progress-width html">&nbsp;</span>
-                  </div>
-                </ListGroup.Item>
-                <ListGroup.Item className="progress container">
-                  <span className="name">
-                    <i class="devicon-css3-plain"></i> CSS
-                  </span>
-                  <div className="progress">
-                    <span className="progress-width css">&nbsp;</span>
-                  </div>
-                </ListGroup.Item>
-                <ListGroup.Item className="progress container">
-                  <span className="name">
-                    <i class="devicon-javascript-plain"></i> JavaScript
-                  </span>
-                  <div className="progress">
-                    <span className="progress-width javascript">&nbsp;</span>
-                  </div>
-                </ListGroup.Item>
-                <ListGroup.Item className="progress container">
-                  <span className="name">
-                    <i class="devicon-react-original"></i> ReactJs
-                  </span>
-                  <div className="progress">
-                    <span className="progress-width reactjs">&nbsp;</span>
-                  </div>
-                </ListGroup.Item>
-                <ListGroup.Item className="progress container">
-                  <span className="name">
-                    <i class="devicon-nodejs-plain"></i> NodeJs
-                  </span>
-                  <div className="progress">
-                    <span className="progress-width nodejs">&nbsp;</span>
-                  </div>
-                </ListGroup.Item>
-                <ListGroup.Item className="progress container">
-                  <span className="name">
-                    <i class="devicon-mongodb-plain"></i> MongoDB
-                  </span>
-                  <div className="progress">
-                    <span className="progress-width mongodb">&nbsp;</span>
-                  </div>
-                </ListGroup.Item>
+                {skills.map((skill) => (
+                  <motion.div
+                    initial="hidden"
+                    whileInView={"visible"}
+                    variants={{
+                      visible: {
+                        x: 1,
+                        opacity: 1,
+                        transition: {
+                          type: "spring",
+                        },
+                      },
+                      hidden: { opacity: 1, x: 80 },
+                    }}
+                  >
+                    <ListGroup.Item className="progress container h-2">
+                      <span className="name">
+                        <i class={skill[0]}></i> {skill[2]}
+                      </span>
+                      <div className="progress">
+                        <span className={`progress-width ${skill[1]}`}>
+                          &nbsp;
+                        </span>
+                      </div>
+                    </ListGroup.Item>
+                  </motion.div>
+                ))}
               </ListGroup>
             )}
 
             {nav == "other" && (
               <ListGroup variant="flush" className="other-tools">
+                {ohterTools.map((tool) => (
+                  <ListGroup.Item className="tool">
+                    <motion.div
+                      initial="hidden"
+                      whileInView={"visible"}
+                      variants={{
+                        visible: {
+                          x: 1,
+                          opacity: 1,
+                          transition: {
+                            type: "spring",
+                          },
+                        },
+                        hidden: { opacity: 1, x: 80 },
+                      }}
+                    >
+                      <i class={tool[0]} style={{ color: "black" }}></i>{" "}
+                      {tool[1]}
+                    </motion.div>
+                  </ListGroup.Item>
+                ))}
+
                 <ListGroup.Item className="tool">
-                  <i class="devicon-bootstrap-plain"></i> Bootstrap
-                </ListGroup.Item>
-                <ListGroup.Item className="tool">
-                  <i class="devicon-heroku-original"></i> Heroku
-                </ListGroup.Item>
-                <ListGroup.Item className="tool"> Netlify</ListGroup.Item>
-                <ListGroup.Item className="tool">
-                  <i class="devicon-git-plain"></i> Git
-                </ListGroup.Item>
-                <ListGroup.Item className="tool">
-                  <i class="devicon-vscode-plain"></i> VS Code
+                  <motion.div
+                    initial="hidden"
+                    whileInView={"visible"}
+                    variants={{
+                      visible: {
+                        x: 1,
+                        opacity: 1,
+                        transition: {
+                          type: "spring",
+                        },
+                      },
+                      hidden: { opacity: 1, x: 80 },
+                    }}
+                  >
+                    <img
+                      src={netlify}
+                      style={{
+                        width: "20px",
+                        height: "20px",
+                      }}
+                    />{" "}
+                    Netlify
+                  </motion.div>
                 </ListGroup.Item>
               </ListGroup>
             )}
