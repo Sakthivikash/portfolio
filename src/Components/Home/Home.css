@@ -47,8 +47,18 @@
   color: (--white);
 }
 .highlighted-text {
-  color: rgb(102, 251, 216);
-  font-size: 28px;
+ 
+  font-size: 30px;
+  letter-spacing: 1px;
+  background: url('../../Images/white.jpg');
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: text 2s linear 2s infinite alternate;
+}
+@keyframes text{
+  from{ background-position: 0% 50%;}
+  to{background-position: 100% 100%;}
 }
 .profile-role-tagline {
   font-weight: 500;

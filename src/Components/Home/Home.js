@@ -14,7 +14,7 @@ function Home() {
             <Row className="profile-details-name">
               <p>
                 <span className="primary-text">Hello🙋‍♂️, I'm </span>
-                <span className="highlighted-text">Sakthivikash</span>
+                <span className="highlighted-text">SAKTHIVIKASH</span>
               </p>
             </Row>
             <Row className="profile-details-role">
